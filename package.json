@@ -9,6 +9,11 @@
   "keywords": [
     "dom"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriejoshua/dom-analyse.git"
+  },
+  "homepage": "https://github.com/kyriejoshua/dom-analyse#readme",
   "author": "kyriejoshua",
   "license": "ISC"
 }
