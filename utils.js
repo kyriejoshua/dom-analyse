@@ -72,6 +72,24 @@ export const getPageNodeInfo = (...nodeNames) => {
   return pageInfo;
 }
 
+/**
+ * Print dom tree stringified
+ * @param {Node} root
+ * @param {String} space
+ * @param {Function} cb
+ */
+export const walkDOMTree = (root, space = '', cb = console.info) => {
+  if (root && root.nodeType === Node.ELEMENT_NODE) {
+    cb(`${space}${root.tagName}`);
+  }
+  space += '|--';
+  let children = root.childNodes;
+  for (let i = 0; i < children.length; i++) {
+    let node = children[i];
+    walkDomTree(node, space);
+  }
+}
+
 export const print = console.table
 
 export const printPageNodeInfo = (...nodeNames) => {
